@@ -5,11 +5,15 @@ body {
 	color: black;
 	background-color: #bcbcbc;
 	font-size: 10pt;
-	margin: 0.6em;
+	margin: 0;
 }
 
 .programme {
 	background-color: white;
+	padding: 1.4em;
+	margin-top: 0.6em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img#cubelogo {
@@ -29,53 +33,33 @@ img#cubelogo {
 	}
 }
 
-.programme {
-	margin-left: auto;
-	margin-right: auto;
-	width: 60%;
-	padding: 1.4em;
-}
-/* Above width=1400px, fix the content at 830px */
+/* Above width=1400px, fix the content at 840px */
 @media screen and (min-width: 1400px) {
 	.programme {
-		margin-left: auto;
-		margin-right: auto;
-		width: 830px;
-		padding: 1.4em;
+		width: 840px;
 	}
 }
 /* 1024-1399px, content is 60% */
-@media screen and (min-width: 900px) and (max-width: 1299px) {
+@media screen and (min-width: 900px) and (max-width: 1399px) {
 	.programme {
-		margin-left: auto;
-		margin-right: auto;
 		width: 60%;
-		padding: 1.4em;
 	}
 }
 /* 650-1024px, content is 605px */
 @media screen and (min-width: 650px) and (max-width: 1024px) {
 	.programme {
-		margin-left: auto;
-		margin-right: auto;
 		width: 605px;
-		padding: 1.4em;
 	}
 }
 /* < 650px, content is full width */
 @media screen and (max-width: 649px) {
 	.programme {
-		margin-left: 0;
-		margin-right: 0;
+		margin-left: 0.4em;
+		margin-right: 0.4em;
 		width: auto;
-		padding: 0.4em;
 	}
 }
 /* There's further shuffling for < 440px below... */
-
-#listing {
-	background-color: white;
-}
 
 .pre_title, .post_title {
 	font-weight: normal;
@@ -104,12 +88,16 @@ img#cubelogo {
 	font-weight: bold;
 }
 
+#listing .copy {
+	/* Stop the paragraph from wrapping below the image (if any): */
+	overflow: hidden;
+}
+
+
 #listing .copy p {
 	padding: 0.5em 0.5em 0.5em 0;
 	margin: 0;
 	white-space: pre-line;
-	/* Stop the paragraph from wrapping below the image (if any): */
-	overflow: hidden;
 }
 
 #listing img {
@@ -161,14 +149,19 @@ span.tags a {
 	margin: 0.1em;
 	border-radius: 0.2em;
 	text-decoration: none;
-	display: none;
+	color: #0055C0;
 }
-span.tags .tag_music { color: blue; display: inline;}
-span.tags .tag_film { color: green; display: inline;}
-span.tags .tag_party { color: red; display: inline;}
-span.tags .tag_talk { color: orange; display: inline;}
-span.tags .tag_cabaret { color: brown; display: inline;}
-span.tags .tag_bluescreen { color: blue; display: inline;}
+span.tags .tag_music { color: blue; }
+span.tags .tag_film { color: green; }
+span.tags .tag_party { color: red; }
+span.tags .tag_talk { color: orange; }
+span.tags .tag_cabaret { color: brown; }
+span.tags .tag_bluescreen { color: blue; }
+span.tags .tag_nanoplex { color: #CA678D; }
+span.tags .tag_animation { color: #FFAA00; }
+
+/* Hide film format tags: */
+.tag_dcp, .tag_35mm, .tag_dvd, .tag_dcp { display: none;}
 
 .footer {
 	margin-top: 2em;
